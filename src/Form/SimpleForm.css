@@ -1,0 +1,11 @@
+.inputtag{
+margin: 10px;
+}
+.error-block
+{
+    background-color:#ff9999;
+    color: red;
+    display: inline;
+    padding: 0px;
+    margin:4px;
+}
