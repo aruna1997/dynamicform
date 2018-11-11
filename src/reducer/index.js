@@ -16,10 +16,14 @@ const data=(state={data:[]},action)=>{
           let allData = state.data;
           allData.push(data);
           return {...state,allData};
-          break;
           case constants.UPDATE_DATA:
           let {dat,i}=action;
-          state.data[i]=dat;
+          console.log('action',dat)
+          const ar=state.data[i];
+          const {username,gender}=dat;
+          let d={...ar,username,gender}
+          console.log('final',d);
+          state.data[i]=d;
           return {...state};
         default:
         return state;  

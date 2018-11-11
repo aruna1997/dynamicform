@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 class UserCard extends Component{
   render(){
      const {data}=this.props
-     console.log('data arrived',this.props);
+     //console.log('data arrived',this.props);
      return <div className="card">
                 <div className="card-body">
                     <h5 className="card-title">User details</h5>
@@ -18,7 +18,7 @@ class UserCard extends Component{
                           return <li key={index}>{j}</li>
                       })
                     }</ul>
-                    <Link to={{ pathname: '/Editdetails', state: { id:this.props.id} }} className="btn btn-primary">Edit</Link>
+                    <Link to={{ pathname: '/dashboard/Editdetails', state: { id:this.props.id} }} className="btn btn-primary">Edit</Link>
                 </div>
                </div>
   }

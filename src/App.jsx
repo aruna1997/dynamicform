@@ -34,8 +34,8 @@ class App extends Component
     {
         return <Switch>
                 <Route path='/dashboard' component={UserListingPage}/>
-                <Route path='/Editdetails' component={EditingPage}/>
-                <Route path='/' component={SimpleForm}/>
+                <Route exact path='/' component={SimpleForm}/>
+                <Route render={()=>{return <div>No page Found</div>}} />
                </Switch>
         //<Form error={this.state.error} onSubmit={this.handleSubmit} onFocus={this.handleFocus}/>
     }
