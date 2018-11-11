@@ -5,7 +5,6 @@ class EditingPage extends Component
 {
     render()
     {
-        console.log('props',this.props);
         const id=this.props.location.state.id;
         const data=this.props.data[id]
         console.log('data',this.props.data[id]);
