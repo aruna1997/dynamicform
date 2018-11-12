@@ -20,8 +20,8 @@ const data=(state={data:[]},action)=>{
           let {dat,i}=action;
           console.log('action',dat)
           const ar=state.data[i];
-          const {username,gender}=dat;
-          let d={...ar,username,gender}
+          const {username,gender,options}=dat;
+          let d={...ar,username,gender,options}
           console.log('final',d);
           state.data[i]=d;
           return {...state};

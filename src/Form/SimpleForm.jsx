@@ -104,6 +104,11 @@ class SimpleForm extends Component{
             ...prevState.field,
             [name]:value}}))
     }
+    isAvailable(val){
+        console.log("called",val);
+        this.state.field.options.find(val)   
+        return true;
+    }
     render()
     {
      console.log(this.state);
@@ -138,10 +143,14 @@ class SimpleForm extends Component{
                                 <div className="error-block">{this.state.error.password}</div>
                             </div>}
                             </div>
-                            <div className="form-group col-xs-5" onChange={this.handleUpdate}>
+                            <div className="form-group col-xs-5">
                                 <label>language:&nbsp;</label>
-                                <input name="language1" type="checkbox" value="java"/>java&nbsp;
-                                <input name="language2" type="checkbox" value="React"/>React
+                                <input name="language1" type="checkbox" value="java"   
+                                 onChange={this.handleUpdate} 
+                                 checked={this.state.field.options.find(i=>(i==="java"))}/>java&nbsp;
+                                <input name="language2" type="checkbox" value="React"
+                                onChange={this.handleUpdate} 
+                                checked={this.state.field.options.find(i=>(i==="React"))}/>React
                                 <div className="error-block">{this.state.error.language}</div>
                             </div>
                             <div className="form-group col-xs-5">
