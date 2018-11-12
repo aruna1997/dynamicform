@@ -4,7 +4,6 @@ import { Switch,Route } from "react-router-dom";
 import { setAuthentication } from "./actions";
 import SimpleForm from "./Form/SimpleForm.jsx";
 import UserListingPage from "./UserListingPage/UserListingPage";
-import EditingPage from "./EditingPage/EditingPage.jsx";
 class App extends Component
 {
    constructor(props)

@@ -75,7 +75,7 @@ class SimpleForm extends Component{
         {
             error.language="Required"
         }
-        if(options.length!=0)
+        if(options.length!==0)
         {
             data.options=options
         }
@@ -99,7 +99,6 @@ class SimpleForm extends Component{
     handleUpdate=(e)=>{
         const name=e.target.name;
         const value=e.target.value;
-        const field=this.state.field.name;  
         this.setState(prevState=>({field:{
             ...prevState.field,
             [name]:value}}))
@@ -111,7 +110,6 @@ class SimpleForm extends Component{
     }
     render()
     {
-     console.log(this.state);
         return (<div className="container">
                     <h2>Form</h2>
                         <form onSubmit={this.handleSubmit}>
